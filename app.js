@@ -79,10 +79,14 @@ const findArea = (b, h) => {
 
 let firstAns = document.querySelectorAll('input[name="first-ans"]');
 let secondAns = document.querySelectorAll('input[name="second-ans"]');
+let thirdAns = document.querySelectorAll('input[name="third-ans"]');
+let fourthAns = document.querySelectorAll('input[name="fourth-ans"]');
+let fifthAns = document.querySelectorAll('input[name="fifth-ans"]');
+let sixthAns = document.querySelectorAll('input[name="sixth-ans"]');
 const quizBtn = document.querySelector('#quiz-btn');
 let quizOutput = document.querySelector('#quiz-output');
 
-const correctAns = ['90', 'right-angled'];
+const correctAns = ['90','right-angled','45','Equilateral triangle','one right angle','no'];
 
 const showScore = (score) => {
   quizOutput.innerHTML = `<h2>Your score is ${score}`;
@@ -114,6 +118,30 @@ const collectAnswers = () => {
   for (let i = 0; i < secondAns.length; i++) {
     if (secondAns[i].checked) {
       selectedAns.push(secondAns[i].value);
+      break;
+    }
+  }
+  for (let i = 0; i < thirdAns.length; i++) {
+    if (thirdAns[i].checked) {
+      selectedAns.push(thirdAns[i].value);
+      break;
+    }
+  }
+  for (let i = 0; i < fourthAns.length; i++) {
+    if (fourthAns[i].checked) {
+      selectedAns.push(fourthAns[i].value);
+      break;
+    }
+  }
+  for (let i = 0; i < fifthAns.length; i++) {
+    if (fifthAns[i].checked) {
+      selectedAns.push(fifthAns[i].value);
+      break;
+    }
+  }
+  for (let i = 0; i < sixthAns.length; i++) {
+    if (sixthAns[i].checked) {
+      selectedAns.push(sixthAns[i].value);
       break;
     }
   }
