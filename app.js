@@ -157,16 +157,22 @@ quizBtn.addEventListener('click', (e) => {
 // area button
 areaBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  if (baseOfTriangle.value !== '' && heightOfTriangle.value !== '') {
+  if (baseOfTriangle.value>0 && heightOfTriangle.value>0) {
     findArea(baseOfTriangle.value, heightOfTriangle.value);
+  }
+  else{
+    areaOutput.innerText="something wents wrong";
   }
 });
 
 // hypotenuse button
 hypotenuseBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  if (bLength.value !== '' && pLength.value !== '') {
+  if (bLength.value>0 && pLength.value>0) {
     findHypotenuse(bLength.value, pLength.value);
+  }
+  else{
+    hypotenuseOutput.innerText="something wents wrong";
   }
 });
 
@@ -174,12 +180,17 @@ hypotenuseBtn.addEventListener('click', (e) => {
 angleBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (
-    firstAngle.value !== '' &&
-    secondAngle.value !== '' &&
-    thirdAngle.value !== ''
+    firstAngle.value>0 &&
+    secondAngle.value>0 &&
+    thirdAngle.value>0
   ) {
     isTriangle(firstAngle.value, secondAngle.value, thirdAngle.value);
+  }
+  else{
+    angleOutput.innerText="something wents wrong";
   }
 });
 
 window.addEventListener('load', switchTab(0));
+
+
